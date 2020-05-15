@@ -1,6 +1,6 @@
 <template>
   <div>
-    勉強開始
+    
   </div>
 </template>
 
