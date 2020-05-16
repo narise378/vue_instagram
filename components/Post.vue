@@ -31,6 +31,6 @@ export default {
         username () {
             return this.user.displayName.charAt(0).toUpperCase() + this.user.displayName.slice(1)
         }
-    }
+    },
 }
 </script>

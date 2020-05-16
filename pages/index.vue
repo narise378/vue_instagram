@@ -14,9 +14,9 @@
 import Logo from '~/components/Logo.vue'
 import Posts from '~/components/Posts.vue'
 export default {
- components: {
-   Posts
- }
+  components: {
+    Posts
+  },
 }
 </script>
 
