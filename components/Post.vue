@@ -26,7 +26,16 @@
 
 <script>
 export default {
-    props: ['post', 'user', 'beLiked'],
+    props: ['post'],
+    data () {
+        return {
+            user: {
+                displayName: 'nari369',
+                photoURL: '/images/post0.jpg'
+            },
+            beLiked: false
+        }
+    },
     computed: {
         username () {
             return this.user.displayName.charAt(0).toUpperCase() + this.user.displayName.slice(1)
