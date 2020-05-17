@@ -1,10 +1,10 @@
-# sns-for-movie
+# vue_instagram
 
-> My badass Nuxt.js project
+> とだノートで購入した教材にて、ハンズオンが学習したアプリです。
 
-## Build Setup
+## 使用技術
 
-``` bash
+``` HTML、CSS
 # install dependencies
 $ npm install
 
@@ -18,5 +18,3 @@ $ npm run start
 # generate static project
 $ npm run generate
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
