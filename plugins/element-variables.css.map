@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAIA,IAAI,CAAJ,4CAAI",
+    "sources": [
+        "element-variables.scss"
+    ],
+    "names": [],
+    "file": "element-variables.css"
+}

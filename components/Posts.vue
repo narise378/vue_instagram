@@ -22,8 +22,8 @@ export default {
   mounted () {
     db.collection('posts').onSnapshot((snaphsot) => {
       snaphsot.docChanges().forEach((change) => {
-        const doc = change.doc
-        if(change.type === 'added') {
+        const doc = change.doc //ドキュメントの変更内容を取得
+        if(change.type === 'added') { //追加、変更があった場合更新する
           this.posts.unshift({ id: doc.id, ...doc.data() }) //unshiftはdesみたいな感じ
         }
       })
