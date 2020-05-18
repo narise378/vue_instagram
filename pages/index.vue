@@ -4,9 +4,9 @@
      <div class="logo">
        <img src="/images/logo.png" class="w-20 py-2">
      </div>
-     <img src="/images/letter.svg" class="absolute w-6 post">
+     <img src="/images/letter.svg" @click="opneModal" class="absolute w-6 post">
    </header>
-   <posts />
+   <posts ref="posts" /><!-- refで命名し子コンポーネントを参照できる -->
  </div>
 </template>
 
@@ -17,6 +17,11 @@ export default {
   components: {
     Posts
   },
+  methods: {
+    openModal () {
+      this.$refs.posts.openModal() // this.$refs.postsのコンポーネントを取得し、そのメソッドを取得できる
+    }
+  }
 }
 </script>
 

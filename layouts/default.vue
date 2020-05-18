@@ -50,9 +50,9 @@ html {
 .post-btn {
  padding: 4px 12px;
  border-radius: 24px;
- background-color: black;
- color: white;
+ color: black;
  font-size: 12px;
+ cursor: pointer;
 }
 
 .el-upload {

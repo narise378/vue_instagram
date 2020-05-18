@@ -1,5 +1,6 @@
 import firebase from 'firebase/app'
-import 'firebase/firestore'
+import 'firebase/firestore' //store読み込み
+import 'firebase/storage' // storege読み込み
 
 if (!firebase.apps.length) {
     const firebaseConfig = {
