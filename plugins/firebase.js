@@ -1,6 +1,7 @@
 import firebase from 'firebase/app'
 import 'firebase/firestore' //store読み込み
 import 'firebase/storage' // storege読み込み
+import 'firebase/auth' // ログイン機能の追加
 
 if (!firebase.apps.length) {
     const firebaseConfig = {

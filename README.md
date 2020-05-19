@@ -4,10 +4,10 @@
 
 ## 使用技術
 
-``` HTML、CSS(Sass)、Vue、Nuxt
-# 
+```
+# HTML、CSS(Sass)、Vue、Vuex, Nuxt
 
-# 
+# FirebaseにてDB,Storege,AuthなどのBaasを使用
 
 # 
 
