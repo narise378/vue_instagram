@@ -55,6 +55,7 @@
 <script>
 import Post from '~/components/Post.vue'
 import { db, firebase } from '~/plugins/firebase' //firestore,storageを使用する
+import { mapActions } from 'vuex'
 
 export default {
   components: {
@@ -66,15 +67,23 @@ export default {
       imageUrl: null,
       text: null,
       modalVisible: false,
-      isAuthenticated: false,
+    }
+  },
+  computed: {
+    currentUser () {
+      return this.$store.state.user //グローバルのstoreのデーターにアクセスできる
+    },
+    isAuthenticated () {
+      return this.$store.getters.isAuthenticated //グローバルのgettersにアクセス
     }
   },
   methods: {
+    ...mapActions(['setUser']),
     login () {
       const provider = new firebase.auth.GoogleAuthProvider() //GoogleAuthプロバイダの情報を初期化
       firebase.auth().signInWithPopup(provider)
         .then((result) => {
-          this.isAuthenticated = true //ログインしていれば投稿画面を表示する
+          this.setUser(result.user)
         }).catch((error) => {
           window.alert(error)
         })
