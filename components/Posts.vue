@@ -1,5 +1,5 @@
 <template>
- <div>
+  <div>
    <div class="posts overflow-scroll mb-24">
      <post v-for="(post, index) in posts" :key="index" :post="post" />
    </div>
