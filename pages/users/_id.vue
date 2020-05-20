@@ -6,7 +6,7 @@
          <img src="/images/post1.jpg" class="w-12 h-12 rounded-full">
        </div>
        <div class="user-name vertical-middle">
-         <p>cohki0305</p>
+         <p>narise369</p>
        </div>
      </div>
      <button class="text-sm">ログアウト</button>

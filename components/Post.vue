@@ -15,7 +15,7 @@
         <div class="actions my-2 ml-4 flex">
             <img v-if="beLiked" src='/images/heart_active.svg' @click="unlike" class="w-6 mr-3">
             <img v-else src='/images/heart.svg' @click="like" class="w-6 mr-3">
-            <p>0</p>
+            <p>{{ likeCount }}</p>
         </div>
         <div class="message mx-4 text-sm">
             <p>{{ post.text }}</p>
@@ -35,6 +35,7 @@ export default {
                 displayName: 'nari369',
                 photoURL: '/images/post0.jpg'
             },
+            likeCount: 0,
             beLiked: false
         }
     },
@@ -42,6 +43,11 @@ export default {
         // dbのposts配下に新しいコレクションlikesを作成し、いいねの情報を保存する
         this.likeRef = db.collection('posts').doc(this.post.id).collection('likes')
         this.checkLikeStatus()
+
+        // onSnapshotでコレクションで起こった変化を監視する
+        this.likeRef.onSnapshot((snap) => {
+            this.likeCount = snap.size // snap.sizeでそこに何件保存されているかを確認できる
+        })
     },
     methods: {
         async like () {

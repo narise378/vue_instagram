@@ -5,7 +5,7 @@
        <a><img src="/images/post1.jpg" class="w-12 h-12 rounded-full"></a>
      </div>
      <div class="displayName vertical-middle">
-       <p>cohki0305</p>
+       <p>narise369</p>
      </div>
    </div>
    <div class="follow-btn vertical-middle">

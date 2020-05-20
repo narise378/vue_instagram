@@ -112,7 +112,7 @@ export default {
     }
   },
   mounted () {
-    db.collection('posts').onSnapshot((snaphsot) => {
+    db.collection('posts').orderBy('createdAt').onSnapshot((snaphsot) => {
       snaphsot.docChanges().forEach((change) => {
         const doc = change.doc //ドキュメントの変更内容を取得
         if(change.type === 'added') { //追加、変更があった場合更新する
